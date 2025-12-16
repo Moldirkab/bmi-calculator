@@ -1,0 +1,13 @@
+
+body {
+background-color:rgb(0, 97, 95);
+color: white;
+}
+.custom-navbar{
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    min-height:80px;
+}
+.extra-padding{
+    padding:6rem;
+}
