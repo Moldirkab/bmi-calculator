@@ -12,12 +12,23 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.post("/bmi-calculator", (req, res) => {
-  const height = parseFloat(req.body.height) / 100;
-  const weight = parseFloat(req.body.weight);
 
-  if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+app.post("/bmi-calculator", (req, res) => {
+  console.log("Form submitted!", req.body); 
+
+  let height = parseFloat(req.body.height);
+  let weight = parseFloat(req.body.weight);
+  const unit = req.body.unit;
+
+  if (!unit || isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
     return res.send("Invalid input!");
+  }
+
+  if (unit === "American") {
+    height = height * 0.0254;
+    weight = weight * 0.453592;
+  } else if (unit === "Traditional") {
+    height = height / 100;
   }
 
   const bmi = (weight / (height * height)).toFixed(1);

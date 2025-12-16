@@ -68,7 +68,13 @@
        <div class="col-md-6">  
         <form action="/bmi-calculator" method="POST"  class=" p-5 border mx-auto w-75" >
             <h3 class="text-center mb-4">BMI Calculation Form</h3>
-            <labe> Height: </labe>
+           <label>
+            <input type="radio" name="unit" value="American" required> American (inches, pounds)
+           </label> <br>
+           <label>
+             <input type="radio" name="unit" value="Traditional"> Traditional (cm, kg)
+           </label><br><br>
+            <label > Height: </labe>
             <input type="text" id="height" name="height" class="form-control mb-4 w-50" value="160">
             <label>Weight: </label>
             <input type="text" id="weight" name="weight" class="form-control mb-4 w-50" value="50">
@@ -81,7 +87,6 @@
     </div>
    
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="script.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
 </body>
 </html>
